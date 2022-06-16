@@ -5,6 +5,7 @@ import 'package:flutter_application_2/views/listview_1.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter_application_2/views/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'material app',
-        home: GetFireBase());
+        home: Splash());
   }
 }
