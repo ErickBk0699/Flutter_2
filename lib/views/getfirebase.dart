@@ -18,9 +18,6 @@ class _GetFireBaseState extends State<GetFireBase> {
   Widget build(BuildContext context) {
     callDatabase();
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Marcas de Carro"),
-        ),
         body: ListView.builder(
             itemCount: registros.length,
             itemBuilder: (context, index) {
@@ -61,6 +58,7 @@ class _GetFireBaseState extends State<GetFireBase> {
 
   void callDatabase() async {
     final response = await connection.getAllRegistros();
+    if (!mounted) return;
     setState(() {
       registros = response.registros!;
     });

@@ -15,7 +15,7 @@ class Home extends State<Splash> {
   @override
   void initState() {
     //set time to load the new page
-    Future.delayed(const Duration(seconds: 10), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Menu()));
     });
