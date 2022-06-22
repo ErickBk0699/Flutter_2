@@ -55,10 +55,10 @@ class MenuS extends State<Menu> {
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'Profile',
-              backgroundColor: Color.fromARGB(255, 189, 167, 134)),
+              backgroundColor: Color.fromARGB(255, 4, 1, 32)),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
