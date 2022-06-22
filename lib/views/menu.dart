@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/views/getfirebase.dart';
+import 'package:flutter_application_2/views/listview_2.dart';
 import 'package:flutter_application_2/views/porfile.dart';
 
 class Menu extends StatefulWidget {
@@ -16,7 +17,7 @@ class MenuS extends State<Menu> {
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('Bienvenidos A Mi Proshecto', style: optionStyle),
+    ListView2(),
     GetFireBase(),
     //Text('Index 2: Profile', style: optionStyle),
     Profile(),
