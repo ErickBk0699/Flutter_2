@@ -17,9 +17,9 @@ class MenuS extends State<Menu> {
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
-    ListView2(),
+    Text('Home', style: optionStyle),
     GetFireBase(),
-    Text('Index 2: Profile', style: optionStyle),
+    ListView2(),
     Profile(),
   ];
   void _onItemTapped(int index) {
@@ -50,15 +50,15 @@ class MenuS extends State<Menu> {
               backgroundColor: Colors.blueGrey),
           BottomNavigationBarItem(
               icon: Icon(Icons.car_crash),
-              label: 'Profile',
+              label: 'Game',
               backgroundColor: Color.fromARGB(255, 125, 170, 164)),
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'Profile',
-              backgroundColor: Color.fromARGB(255, 189, 167, 134)),
+              backgroundColor: Color.fromARGB(255, 4, 1, 32)),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
