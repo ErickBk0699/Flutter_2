@@ -19,7 +19,7 @@ class MenuS extends State<Menu> {
   static const List<Widget> _widgetOptions = <Widget>[
     ListView2(),
     GetFireBase(),
-    //Text('Index 2: Profile', style: optionStyle),
+    Text('Index 2: Profile', style: optionStyle),
     Profile(),
   ];
   void _onItemTapped(int index) {
@@ -32,7 +32,7 @@ class MenuS extends State<Menu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
         title: const Text('Car Wash'),
       ),
       body: Center(
@@ -40,19 +40,27 @@ class MenuS extends State<Menu> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.house), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.car_repair), label: 'Service'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+              icon: Icon(Icons.house),
+              label: 'Home',
+              backgroundColor: Color.fromARGB(255, 116, 94, 116)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.car_repair),
+              label: 'Service',
+              backgroundColor: Colors.blueGrey),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.car_crash),
+              label: 'Profile',
+              backgroundColor: Color.fromARGB(255, 125, 170, 164)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+              backgroundColor: Color.fromARGB(255, 189, 167, 134)),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
-      /* body: Container(
-        alignment: Alignment.center,
-        child: const Text("Home"),
-        ), */
     );
   }
 }
