@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/views/getfirebase.dart';
+import 'package:flutter_application_2/views/home.dart';
 import 'package:flutter_application_2/views/listview_2.dart';
 import 'package:flutter_application_2/views/porfile.dart';
 
@@ -17,7 +18,7 @@ class MenuS extends State<Menu> {
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home', style: optionStyle),
+    Home(),
     GetFireBase(),
     ListView2(),
     Profile(),
@@ -43,7 +44,7 @@ class MenuS extends State<Menu> {
           BottomNavigationBarItem(
               icon: Icon(Icons.house),
               label: 'Home',
-              backgroundColor: Color.fromARGB(255, 116, 94, 116)),
+              backgroundColor: Color.fromARGB(255, 87, 199, 255)),
           BottomNavigationBarItem(
               icon: Icon(Icons.car_repair),
               label: 'Service',
