@@ -28,26 +28,48 @@ class _GetFireBaseState extends State<GetFireBase> {
                 title: Text(
                     "${registros[index].nombre!} ${registros[index].apellido!}"),
                 onTap: () => showDialog<String>(
+                  barrierColor: Colors.lightBlue,
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
-                    title: Text(
-                        "${registros[index].nombre!} ${registros[index].apellido!}"),
+                    backgroundColor: Colors.grey,
+                    
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image(image: NetworkImage(registros[index].image!)),
-                        Text(
-                            '${registros[index].servicio.toString()}\n\n${registros[index].carro}'),
+                        
+                        const Text(''),
+                        const Text('Datos de Usuario', style: TextStyle(fontWeight: FontWeight.bold) ),
+                        
+                        Text('Nombre y Apellidos : ${registros[index].nombre} ${registros[index].apellido}'),
+                        
+                        Text('Telefono :${registros[index].cel}'),
+                        Text('Licencia : ${registros[index].licencia}'),
+
+                        const Text(''),
+                        const Text('Servicios', style: TextStyle(fontWeight: FontWeight.bold) ),
+                        
+                        Text('Lavado : ${registros[index].servicio?.lavado}'),
+                        Text('Pulido : ${registros[index].servicio?.polish}'),
+                        Text('Tapiceria :${registros[index].servicio?.tapiceria}'),
+
+                        const Text(''),
+                        const Text('Carro', style: TextStyle(fontWeight: FontWeight.bold) ),
+                        
+                        Text('Marco : ${registros[index].carro?.marca}'),
+                        Text('Modelo : ${registros[index].carro?.modelo}'),
+                        Text('Color :${registros[index].carro?.color}'),
+                        Text('Placa :${registros[index].carro?.placa}'),
                       ],
                     ),
                     actions: <Widget>[
                       TextButton(
                         onPressed: () => Navigator.pop(context, 'Cancel'),
-                        child: const Text('Cancel'),
+                        child: const Text('Cancel', style: TextStyle(color: Colors.black)),
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(context, 'OK'),
-                        child: const Text('OK'),
+                        child: const Text('OK', style: TextStyle(color: Colors.black)),
                       ),
                     ],
                   ),
