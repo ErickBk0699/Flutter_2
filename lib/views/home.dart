@@ -10,8 +10,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    final double coverHeight = 180;
-    final double profileHeight = 50;
+    const double coverHeight = 180;
+    const double profileHeight = 50;
 
     return Scaffold(
       body: ListView(padding: EdgeInsets.zero, children: <Widget>[
@@ -52,15 +52,14 @@ class _HomeState extends State<Home> {
       );
 
   Widget buildTop(coverHeight, profileHeight) {
-    final top = coverHeight - profileHeight / 2;
     final bottom = profileHeight / 2;
     return Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.center,
         children: [
           Container(
-            child: buildCoverImage(coverHeight),
             margin: EdgeInsets.only(bottom: bottom),
+            child: buildCoverImage(coverHeight),
           ),
 
           //const SizedBox(height:24),
